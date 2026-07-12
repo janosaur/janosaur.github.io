@@ -1,0 +1,140 @@
+/* General styling */
+
+body {
+    /*styling*/
+    background-color:#fffaef;
+    color: #3e1a1a;
+    margin:0px;
+    /*text*/
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    /*behavior*/
+    overflow-x: hidden;
+    cursor: url(shed/cursor.png), auto;
+}
+
+hr {
+    color: white;
+    border-top: dashed 1px saddlebrown;
+}
+
+/* Content placement */
+
+.content {
+    margin-top: -15px;
+    padding:5%;
+    padding-right:8%;
+}
+
+li {
+    margin-left: 5%;
+}
+
+
+/* Image placements */
+
+img.hero {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    transform: translateX(50%);
+}
+
+img.it-me {
+    z-index: -1;
+    height:max-content;
+    float:right;
+   padding: 0% 0% 5% 10%;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: underline;
+    color: inherit;
+    cursor: inherit;
+}
+
+a:hover {
+   text-decoration:underline double;
+   cursor: inherit;
+}
+
+/* Block tag styling */
+
+.tag {
+    font-size:16px;
+    vertical-align: middle;
+    background-color:#7d07072c;
+    padding: 10px 10px;
+    border-radius: 10px;
+    letter-spacing:1px;
+    transform:rotate(30deg);
+}
+
+/*Rotating flower animation*/
+
+.rotate-on-hover {
+    display: inline-block;
+    will-change: transform;
+    transform-origin: center;
+    transition: transform 560ms cubic-bezier(.2,.9,.3,1);
+}
+.rotate-on-hover:hover,
+.rotate-on-hover:focus {
+    transform: rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rotate-on-hover {
+        transition: none;
+    }
+    .rotate-on-hover:hover,
+    .rotate-on-hover:focus {
+        transform: none;
+    }
+}
+
+/* Audio player styling */
+
+.playbutton {
+    margin-left: -10px;
+    margin-right: 8px;
+	height: 30px;
+	width: 30px;
+	border: none;
+	float: left;
+	outline: none;
+	cursor: url(shed/cursor.png), auto;
+}
+
+.play {
+	background: url('http://www.alexkatz.me/codepen/img/play.png');
+}
+
+.pause {
+	background: url('http://www.alexkatz.me/codepen/img/pause.png');
+}
+
+.play,
+.pause {
+	background-size: 50% 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Audio text */
+
+.audio-text {
+    display: inline-flex;
+    background-color:#7d07072c;
+    margin-top:5px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    align-items: center;
+    vertical-align: middle;
+    font-family: Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
